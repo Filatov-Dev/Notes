@@ -12,6 +12,10 @@
 		969201F42A90BB3800622BFB /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 969201F22A90BB3800622BFB /* Notes.xcdatamodeld */; };
 		969201F62A90BB3900622BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969201F52A90BB3900622BFB /* Assets.xcassets */; };
 		969201F92A90BB3900622BFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969201F72A90BB3900622BFB /* LaunchScreen.storyboard */; };
+		9693E1D52AA7A0BD006C0019 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693E1D42AA7A0BD006C0019 /* MainViewController.swift */; };
+		9693E1D82AA7A408006C0019 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693E1D72AA7A408006C0019 /* UIView.swift */; };
+		9693E1DA2AA7A68F006C0019 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693E1D92AA7A68F006C0019 /* NoteCell.swift */; };
+		9693E1DC2AA7ACF1006C0019 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693E1DB2AA7ACF1006C0019 /* NoteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		969201F52A90BB3900622BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		969201F82A90BB3900622BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		969201FA2A90BB3900622BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9693E1D42AA7A0BD006C0019 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9693E1D72AA7A408006C0019 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		9693E1D92AA7A68F006C0019 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		9693E1DB2AA7ACF1006C0019 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		969201E82A90BB3800622BFB /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				9693E1D62AA7A38F006C0019 /* Extensions */,
+				969202042AA62C1D00622BFB /* Model */,
+				969202022AA62BD600622BFB /* Controller */,
+				969202012AA62BCD00622BFB /* View */,
 				969201E92A90BB3800622BFB /* AppDelegate.swift */,
-				969201ED2A90BB3800622BFB /* ViewController.swift */,
 				969201F52A90BB3900622BFB /* Assets.xcassets */,
 				969201F72A90BB3900622BFB /* LaunchScreen.storyboard */,
 				969201FA2A90BB3900622BFB /* Info.plist */,
 				969201F22A90BB3800622BFB /* Notes.xcdatamodeld */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		969202012AA62BCD00622BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		969202022AA62BD600622BFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				969201ED2A90BB3800622BFB /* ViewController.swift */,
+				9693E1D42AA7A0BD006C0019 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		969202042AA62C1D00622BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9693E1D92AA7A68F006C0019 /* NoteCell.swift */,
+				9693E1DB2AA7ACF1006C0019 /* NoteModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9693E1D62AA7A38F006C0019 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9693E1D72AA7A408006C0019 /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9693E1D82AA7A408006C0019 /* UIView.swift in Sources */,
 				969201EE2A90BB3800622BFB /* ViewController.swift in Sources */,
 				969201EA2A90BB3800622BFB /* AppDelegate.swift in Sources */,
+				9693E1DC2AA7ACF1006C0019 /* NoteModel.swift in Sources */,
+				9693E1DA2AA7A68F006C0019 /* NoteCell.swift in Sources */,
 				969201F42A90BB3800622BFB /* Notes.xcdatamodeld in Sources */,
+				9693E1D52AA7A0BD006C0019 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
