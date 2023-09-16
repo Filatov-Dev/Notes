@@ -8,7 +8,7 @@
 import UIKit
 
 struct NoteModel {
-    var image       : UIImageView
-    var title       : UILabel
-    var description : UILabel
+    var image       : UIImage
+    var title       : String
+    var description : String
 }

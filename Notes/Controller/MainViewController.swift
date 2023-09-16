@@ -19,14 +19,14 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Notes"
-        notes = enrichDate()
+        notes = enrichData()
         configureTabelView()
     }
     
     func configureTabelView() {
         view.addSubview(tabelView)
         setTabelViewDelegates()
-        tabelView.rowHeight = 50
+        tabelView.rowHeight = 90
         tabelView.register(NoteCell.self, forCellReuseIdentifier: Cell.noteCell)
         tabelView.pin(to: view)
     }
@@ -37,28 +37,30 @@ class MainViewController: UIViewController{
     }
 }
 
-
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.noteCell) as! NoteCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteCell.identifier, for: indexPath) as? NoteCell else {
+            fatalError("The tabelview is broken")
+        }
+        let note = self.notes[indexPath.row]
+        cell.setData(note: note)
         
-        
-        
-        return UITableViewCell()
+        return cell
     }
     
     
 }
 
 extension MainViewController {
-    func enrichDate() -> [NoteModel] {
-        let note1 = NoteModel(image: UIImage(), title: "First note", description: "My firs note")
-        let note2 = NoteModel(image: UIImage(), title: "Second note", description: "My second note")
-        let note3 = NoteModel(image: UIImage(), title: "Third note", description: "My third note")
+    
+    func enrichData() -> [NoteModel] {
+        let note1 = NoteModel(image: UIImage(named: "razrabotka_11")!, title: "First note", description: "My firs note")
+        let note2 = NoteModel(image: UIImage(named: "razrabotka_11")!, title: "Second note", description: "My second note")
+        let note3 = NoteModel(image: UIImage(named: "razrabotka_11")!, title: "Third note", description: "My third note")
         
         return [note1, note2, note3]
     }
